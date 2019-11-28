@@ -1,6 +1,6 @@
 {
   "name": "react-media-query-hooks",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "description": "React hooks for CSS media queries",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
@@ -20,8 +20,5 @@
     "microbundle": "^0.11.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
-  },
-  "dependencies": {
-    "react-adaptive-hooks": "^0.0.6"
   }
 }
