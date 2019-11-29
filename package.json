@@ -1,6 +1,6 @@
 {
   "name": "react-media-query-hooks",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "React hooks for CSS media queries",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
