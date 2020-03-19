@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+// @flow
+import { useState, useEffect } from 'react';
 
-export default function useMatchMedia(query) {
+export default function useMatchMedia(query: string): boolean {
   const [matches, setMatches] = useState(false);
 
   useEffect(() => {
@@ -8,13 +9,13 @@ export default function useMatchMedia(query) {
     setMatches(mqList.matches);
 
     function onChange() {
-      const { matches } = window.matchMedia(query);
-      setMatches(matches);
+      const { matches: changedMatch } = window.matchMedia(query);
+      setMatches(changedMatch);
     }
-    mqList.addEventListener("change", onChange);
+    mqList.addEventListener('change', onChange);
 
     return () => {
-      mqList.removeEventListener("change", onChange);
+      mqList.removeEventListener('change', onChange);
     };
   }, [query]);
 

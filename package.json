@@ -1,6 +1,6 @@
 {
   "name": "react-media-query-hooks",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "React hooks for CSS media queries",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
@@ -17,8 +17,31 @@
     "react-dom": "^16.8.0"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-flowtype": "^4.5.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": ">=4",
+    "lint-staged": ">=10",
     "microbundle": "^0.11.0",
+    "prettier": "1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
