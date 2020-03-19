@@ -3,15 +3,12 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  extends: [
-    'airbnb',
-    "plugin:flowtype/recommended"
-  ],
+  extends: ['airbnb', 'plugin:flowtype/recommended', 'plugin:prettier/recommended'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
-  parser: "babel-eslint",
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -19,10 +16,6 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    'flowtype',
-  ],
-  rules: {
-  },
+  plugins: ['react', 'flowtype'],
+  rules: {},
 };
